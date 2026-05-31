@@ -32,19 +32,21 @@ export default function Header() {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-md py-1" : "bg-white/95 backdrop-blur-sm py-1.5"
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-md py-1"
+          : "bg-transparent py-2"
       }`}>
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between h-14">
 
-          {/* Logo — compact on mobile */}
+          {/* Logo */}
           <a href="#home" className="flex items-center shrink-0">
-            <div className="relative" style={{ width: "clamp(110px, 32vw, 170px)", height: "clamp(44px, 13vw, 70px)" }}>
+            <div className="relative" style={{ width: "clamp(100px, 28vw, 165px)", height: "clamp(40px, 12vw, 68px)" }}>
               <Image
                 src="/images/logo.png"
                 alt="Your Physio Friend"
                 fill
-                sizes="170px"
+                sizes="165px"
                 style={{ objectFit: "contain", objectPosition: "left center" }}
                 priority
               />
@@ -54,7 +56,9 @@ export default function Header() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-6">
             {navLinks.map(({ label, href }) => (
-              <a key={href} href={href} className="text-[#1b3a6b] font-medium text-sm hover:text-[#0d9488] transition-colors">
+              <a key={href} href={href} className={`font-medium text-sm transition-colors ${
+                scrolled ? "text-[#1b3a6b] hover:text-[#0d9488]" : "text-white/90 hover:text-white"
+              }`}>
                 {label}
               </a>
             ))}
@@ -62,15 +66,21 @@ export default function Header() {
 
           {/* Right side */}
           <div className="flex items-center gap-2">
-            <a href="tel:9306893393" className="hidden sm:flex items-center gap-1 text-sm font-semibold text-[#0d9488]">
+            <a href="tel:9306893393" className={`hidden sm:flex items-center gap-1 text-sm font-semibold transition-colors ${
+              scrolled ? "text-[#0d9488]" : "text-white/80 hover:text-white"
+            }`}>
               <Phone size={14} /> 9306893393
             </a>
             <a href="#contact" className="hidden md:inline-block bg-[#0d9488] hover:bg-[#0f766e] text-white text-sm font-semibold px-4 py-2 rounded-full transition-colors shadow-sm">
               Book Appointment
             </a>
-            {/* Mobile hamburger */}
+            {/* Mobile hamburger — adapts to bg */}
             <button
-              className="md:hidden w-9 h-9 flex items-center justify-center rounded-xl bg-[#f0fdfa] text-[#1b3a6b] active:scale-95 transition-transform"
+              className={`md:hidden w-9 h-9 flex items-center justify-center rounded-xl active:scale-95 transition-all ${
+                scrolled
+                  ? "bg-[#f0fdfa] text-[#1b3a6b]"
+                  : "bg-white/15 backdrop-blur-sm text-white border border-white/20"
+              }`}
               onClick={() => setMenuOpen(true)}
               aria-label="Open menu"
             >
