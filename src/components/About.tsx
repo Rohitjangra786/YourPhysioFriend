@@ -27,8 +27,8 @@ const stats = [
   },
   {
     Icon: Trophy,
-    value: "2+ yrs",
-    label: "Hospital Experience",
+    value: "5+ Yrs",
+    label: "Experience",
     gradient: "linear-gradient(145deg, #f59e0b, #fbbf24)",
     glow: "rgba(245,158,11,0.25)",
   },
