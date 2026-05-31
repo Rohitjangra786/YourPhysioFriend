@@ -53,8 +53,7 @@ export default function Location() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
               {[
-                { day: "Mon – Fri", time: "9:00 AM – 7:00 PM", open: true },
-                { day: "Saturday", time: "9:00 AM – 5:00 PM", open: true },
+                { day: "Mon – Sat", time: "9:00 AM – 7:00 PM", open: true },
                 { day: "Sunday", time: "By Appointment", open: false },
               ].map((h) => (
                 <div key={h.day} className="flex justify-between sm:flex-col sm:gap-1 items-center sm:items-start bg-white/10 rounded-xl px-4 py-3">
