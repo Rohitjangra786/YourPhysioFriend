@@ -87,6 +87,13 @@ export default function Contact() {
                 <div className="flex justify-between"><span>Monday – Saturday</span><span className="text-white font-medium">9:00 AM – 7:00 PM</span></div>
                 <div className="flex justify-between"><span>Sunday</span><span className="text-white font-medium">By Appointment</span></div>
               </div>
+              <div className="flex items-center justify-between mt-4 pt-4 border-t border-white/10">
+                <div className="flex items-center gap-2">
+                  <span className="text-xl">💳</span>
+                  <span className="text-sm text-white/70">Consultation Fee</span>
+                </div>
+                <span className="text-[#5eead4] font-bold text-lg">₹1,000</span>
+              </div>
               <p className="text-xs text-white/50 mt-4">
                 🏥 Home visits &amp; corporate sessions available on request.
               </p>
