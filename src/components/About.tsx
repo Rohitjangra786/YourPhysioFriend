@@ -43,7 +43,7 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="about" className="py-14 md:py-24 bg-[#f0fdfa]">
+    <section id="about" className="py-10 md:py-16 bg-[#f0fdfa]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Stats grid — top on mobile */}

@@ -23,10 +23,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-14 md:py-24" style={{ background: "linear-gradient(135deg, #0f2548 0%, #1b3a6b 60%, #0d9488 100%)" }}>
+    <section id="contact" className="py-10 md:py-16" style={{ background: "linear-gradient(135deg, #0f2548 0%, #1b3a6b 60%, #0d9488 100%)" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-8 md:mb-14">
+        <div className="text-center mb-6 md:mb-10">
           <span className="text-[#5eead4] text-xs font-semibold uppercase tracking-widest">Get in Touch</span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-3" style={{ fontFamily: "var(--font-space)" }}>
             Book Your Appointment

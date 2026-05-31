@@ -67,10 +67,10 @@ function StarRating({ rating }: { rating: number }) {
 
 export default function Reviews() {
   return (
-    <section id="reviews" className="py-14 md:py-24 bg-white overflow-hidden">
+    <section id="reviews" className="py-10 md:py-16 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-8 md:mb-12">
+        <div className="text-center mb-6 md:mb-10">
           <span className="text-[#0d9488] text-xs font-semibold uppercase tracking-widest">Patient Reviews</span>
           <h2 className="text-3xl md:text-4xl font-bold text-[#1b3a6b] mt-2 mb-3" style={{ fontFamily: "var(--font-space)" }}>
             What Our Patients Say
