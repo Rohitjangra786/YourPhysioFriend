@@ -22,6 +22,11 @@ export const metadata: Metadata = {
     "From Pain to Power—Let's Get You Moving. Expert physiotherapy and rehabilitation by Dr. Deven Sharma, BPT, MPT (Ortho). Specializing in orthopaedic, sports & posture care.",
   keywords:
     "physiotherapy, physiotherapist, Dr Deven Sharma, Gurugram, sports injury, orthopaedic, posture correction, rehabilitation",
+  icons: {
+    icon: "/images/logo.jpg",
+    shortcut: "/images/logo.jpg",
+    apple: "/images/logo.jpg",
+  },
 };
 
 export default function RootLayout({
