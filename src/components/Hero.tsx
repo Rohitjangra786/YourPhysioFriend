@@ -43,8 +43,8 @@ export default function Hero() {
           <div className="mt-8 grid grid-cols-3 gap-4 border-t border-white/10 pt-6">
             {[
               { value: "1000+", label: "Patients" },
-              { value: "3+", label: "Yrs Experience" },
-              { value: "6+", label: "Treatments" },
+              { value: "5+", label: "Yrs Experience" },
+              { value: "25+", label: "Treatments" },
             ].map((stat) => (
               <div key={stat.label} className="text-center sm:text-left">
                 <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#5eead4]" style={{ fontFamily: "var(--font-space)" }}>{stat.value}</div>

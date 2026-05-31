@@ -23,9 +23,9 @@ export const metadata: Metadata = {
   keywords:
     "physiotherapy, physiotherapist, Dr Deven Sharma, Gurugram, sports injury, orthopaedic, posture correction, rehabilitation",
   icons: {
-    icon: "/images/logo.jpg",
-    shortcut: "/images/logo.jpg",
-    apple: "/images/logo.jpg",
+    icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
   },
 };
 

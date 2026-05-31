@@ -36,11 +36,11 @@ export default function Header() {
           <div className="relative overflow-hidden"
             style={{ width: "clamp(100px, 28vw, 160px)", height: "clamp(42px, 12vw, 68px)" }}>
             <Image
-              src="/images/logo.jpg"
+              src="/images/logo.png"
               alt="Your Physio Friend Logo"
               fill
               sizes="160px"
-              style={{ objectFit: "contain", objectPosition: "center", transform: "scale(1.08)", mixBlendMode: "multiply" }}
+              style={{ objectFit: "contain", objectPosition: "center", transform: "scale(1.08)" }}
               priority
             />
           </div>

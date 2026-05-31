@@ -32,7 +32,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="relative overflow-hidden rounded-lg bg-white" style={{ width: 160, height: 68 }}>
               <Image
-                src="/images/logo.jpg"
+                src="/images/logo.png"
                 alt="Your Physio Friend"
                 fill
                 sizes="160px"
