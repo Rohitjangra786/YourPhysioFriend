@@ -33,6 +33,7 @@ export default function Footer() {
                 src="/images/logo.jpg"
                 alt="Your Physio Friend"
                 fill
+                sizes="160px"
                 style={{ objectFit: "contain", objectPosition: "center", transform: "scale(1.08)" }}
               />
             </div>

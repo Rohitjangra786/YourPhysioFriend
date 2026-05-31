@@ -36,6 +36,7 @@ export default function Header() {
               src="/images/logo.jpg"
               alt="Your Physio Friend Logo"
               fill
+              sizes="160px"
               style={{ objectFit: "contain", objectPosition: "center", transform: "scale(1.08)" }}
               priority
             />

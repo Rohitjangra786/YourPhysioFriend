@@ -59,6 +59,7 @@ export default function Doctor() {
                 src="/images/doctor.jpg"
                 alt="Dr. Deven Sharma — Physiotherapist"
                 fill
+                sizes="288px"
                 style={{ objectFit: "cover", objectPosition: "center top" }}
                 priority
               />
