@@ -43,11 +43,8 @@ body { background: #ffffff; color: #171717; }
 .animate-fade-up-3    { animation: fade-up 0.7s 0.30s ease-out both; }
 .animate-fade-up-4    { animation: fade-up 0.7s 0.45s ease-out both; }
 
-.text-gradient-teal {
-  background: linear-gradient(135deg, #5eead4 0%, #2dd4bf 50%, #a7f3d0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.text-teal-bright {
+  color: #5eead4;
 }
 .btn-glow {
   box-shadow: 0 0 20px rgba(13,148,136,0.45), 0 4px 16px rgba(13,148,136,0.3);

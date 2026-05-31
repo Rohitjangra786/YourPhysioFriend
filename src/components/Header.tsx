@@ -41,13 +41,14 @@ export default function Header() {
 
           {/* Logo — white silhouette on dark hero, full color when scrolled */}
           <a href="#home" className="flex items-center shrink-0">
-            <div className="relative transition-all duration-300"
+            <div className="relative"
               style={{
                 width: "clamp(95px, 26vw, 160px)",
                 height: "clamp(38px, 11vw, 65px)",
                 filter: scrolled
                   ? "none"
-                  : "brightness(0) invert(1) drop-shadow(0 0 6px rgba(255,255,255,0.4))",
+                  : "brightness(0) invert(1) drop-shadow(0 0 5px rgba(255,255,255,0.35))",
+                transition: "filter 0.4s ease",
               }}>
               <Image
                 src="/images/logo.png"

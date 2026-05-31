@@ -36,7 +36,7 @@ export default function Hero() {
           {/* Headline */}
           <h1 className="animate-fade-up-2 font-extrabold leading-[1.05] tracking-tight mb-5" style={{ fontFamily: "var(--font-space)" }}>
             <span className="block text-white text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl">From</span>
-            <span className="block text-gradient-teal text-[2.8rem] sm:text-6xl md:text-7xl lg:text-8xl">Pain to</span>
+            <span className="block text-teal-bright text-[2.8rem] sm:text-6xl md:text-7xl lg:text-8xl">Pain to</span>
             <span className="block text-white text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl">Power</span>
             <span className="block text-white/60 text-lg sm:text-2xl md:text-3xl font-semibold mt-2">Let&apos;s Get You Moving</span>
           </h1>
@@ -82,7 +82,7 @@ export default function Hero() {
               <div key={label}
                 className="bg-white/5 border border-white/10 rounded-2xl px-2 py-3.5 text-center backdrop-blur-sm hover:bg-white/10 transition-colors">
                 <div className="flex justify-center mb-1 text-[#5eead4] opacity-70"><Icon size={16} /></div>
-                <div className="text-xl sm:text-2xl font-black text-gradient-teal" style={{ fontFamily: "var(--font-space)" }}>{value}</div>
+                <div className="text-xl sm:text-2xl font-black text-teal-bright" style={{ fontFamily: "var(--font-space)" }}>{value}</div>
                 <div className="text-white/40 text-[10px] sm:text-xs leading-tight mt-0.5">{label}</div>
               </div>
             ))}
