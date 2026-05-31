@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+@theme {
+  --color-teal: #0d9488;
+  --color-teal-light: #14b8a6;
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbf1;
+  --color-navy: #1b3a6b;
+  --color-navy-dark: #0f2548;
+  --font-poppins: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-playfair: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
