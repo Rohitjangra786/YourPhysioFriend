@@ -41,44 +41,29 @@ export default function Header() {
 
           {/* Logo + site name */}
           <a href="#home" className="flex items-center gap-2.5 shrink-0">
-            {/* Tight white bg only behind the logo image — no big pill */}
-            <div className={`relative rounded-xl overflow-hidden transition-all duration-300 ${
-              scrolled ? "" : "bg-white/95 shadow-md"
-            }`} style={{ width: "clamp(38px, 11vw, 52px)", height: "clamp(38px, 11vw, 52px)", padding: scrolled ? 0 : 3 }}>
-              <Image
-                src="/images/logo.png"
-                alt="Your Physio Friend"
-                fill
-                sizes="52px"
-                style={{ objectFit: "contain", objectPosition: "center" }}
-                priority
-              />
+
+            {/* Mobile: small icon + text */}
+            <div className="md:hidden flex items-center gap-2">
+              <div className={`relative rounded-xl overflow-hidden transition-all duration-300 ${
+                scrolled ? "bg-white/10" : "bg-white/95 shadow-md"
+              }`} style={{ width: 42, height: 42, padding: scrolled ? 2 : 3, flexShrink: 0 }}>
+                <Image src="/images/logo.png" alt="Your Physio Friend" fill sizes="42px"
+                  style={{ objectFit: "contain", objectPosition: "center" }} priority />
+              </div>
+              <div className="flex flex-col leading-tight">
+                <span className={`font-extrabold text-sm tracking-tight transition-colors duration-300 ${
+                  scrolled ? "text-[#1b3a6b]" : "text-white"
+                }`} style={{ fontFamily: "var(--font-space)" }}>Your Physio Friend</span>
+                <span className={`text-[10px] font-medium transition-colors duration-300 ${
+                  scrolled ? "text-[#0d9488]" : "text-[#5eead4]"
+                }`}>by Dr. Deven Sharma</span>
+              </div>
             </div>
 
-            {/* Clinic name text — mobile only */}
-            <div className="flex flex-col md:hidden leading-tight">
-              <span className={`font-extrabold text-sm tracking-tight transition-colors duration-300 ${
-                scrolled ? "text-[#1b3a6b]" : "text-white"
-              }`} style={{ fontFamily: "var(--font-space)" }}>
-                Your Physio Friend
-              </span>
-              <span className={`text-[10px] font-medium transition-colors duration-300 ${
-                scrolled ? "text-[#0d9488]" : "text-[#5eead4]"
-              }`}>
-                by Dr. Deven Sharma
-              </span>
-            </div>
-
-            {/* Full logo for desktop */}
-            <div className="hidden md:block relative" style={{ width: 140, height: 58 }}>
-              <Image
-                src="/images/logo.png"
-                alt="Your Physio Friend"
-                fill
-                sizes="140px"
-                style={{ objectFit: "contain", objectPosition: "left center" }}
-                priority
-              />
+            {/* Desktop: full logo only */}
+            <div className="hidden md:block relative" style={{ width: 150, height: 62 }}>
+              <Image src="/images/logo.png" alt="Your Physio Friend" fill sizes="150px"
+                style={{ objectFit: "contain", objectPosition: "left center" }} priority />
             </div>
           </a>
 
