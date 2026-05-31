@@ -39,11 +39,16 @@ export default function Header() {
       }`}>
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between h-14">
 
-          {/* Logo — white frosted pill on dark bg, plain on white bg */}
-          <a href="#home" className={`flex items-center shrink-0 rounded-xl transition-all duration-300 ${
-            scrolled ? "" : "bg-white/90 backdrop-blur-sm px-2 py-1 shadow-md"
-          }`}>
-            <div className="relative" style={{ width: "clamp(95px, 26vw, 160px)", height: "clamp(38px, 11vw, 65px)" }}>
+          {/* Logo — white silhouette on dark hero, full color when scrolled */}
+          <a href="#home" className="flex items-center shrink-0">
+            <div className="relative transition-all duration-300"
+              style={{
+                width: "clamp(95px, 26vw, 160px)",
+                height: "clamp(38px, 11vw, 65px)",
+                filter: scrolled
+                  ? "none"
+                  : "brightness(0) invert(1) drop-shadow(0 0 6px rgba(255,255,255,0.4))",
+              }}>
               <Image
                 src="/images/logo.png"
                 alt="Your Physio Friend"
