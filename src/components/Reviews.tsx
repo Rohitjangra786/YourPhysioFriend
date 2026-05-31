@@ -90,20 +90,19 @@ export default function Reviews() {
           </div>
         </div>
 
-        {/* Mobile: horizontal scroll; Desktop: grid */}
-        <div className="flex gap-3 overflow-x-auto pb-2 -mx-4 px-4 md:mx-0 md:px-0 md:overflow-visible md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5 snap-x snap-mandatory">
+        {/* Mobile: full-width snap carousel (1 card at a time); Desktop: grid */}
+        <div className="flex gap-4 overflow-x-auto pb-3 -mx-4 px-4 md:mx-0 md:px-0 md:overflow-visible md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5 snap-x snap-mandatory scroll-smooth">
           {reviews.map((r) => (
             <div
               key={r.name}
-              className="bg-white border border-gray-100 rounded-2xl p-4 md:p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3 min-w-[78vw] sm:min-w-[60vw] md:min-w-0 snap-start shrink-0 md:shrink"
+              className="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3 w-[calc(100vw-2rem)] shrink-0 md:w-auto md:shrink snap-center"
             >
-              {/* Reviewer info */}
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-[#0d9488] text-white flex items-center justify-center text-xs font-bold shrink-0">
+                <div className="w-10 h-10 rounded-full bg-[#0d9488] text-white flex items-center justify-center text-sm font-bold shrink-0">
                   {r.avatar}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="font-semibold text-[#1b3a6b] text-sm truncate">{r.name}</p>
+                  <p className="font-semibold text-[#1b3a6b] text-sm">{r.name}</p>
                   <div className="flex items-center gap-2 mt-0.5">
                     <StarRating rating={r.rating} />
                     <span className="text-gray-400 text-xs">{r.date}</span>
@@ -111,12 +110,15 @@ export default function Reviews() {
                 </div>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" className="w-4 h-4 shrink-0" />
               </div>
-              <p className="text-gray-600 text-xs md:text-sm leading-relaxed">&ldquo;{r.review}&rdquo;</p>
+              <p className="text-gray-600 text-sm leading-relaxed">&ldquo;{r.review}&rdquo;</p>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-8">
+        {/* Swipe hint on mobile */}
+        <p className="text-center text-gray-400 text-xs mt-3 md:hidden">← Swipe to read more reviews →</p>
+
+        <div className="text-center mt-6">
           <a href="https://share.google/M4qNPpCJKM7jRp8NK" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border-2 border-[#0d9488] text-[#0d9488] hover:bg-[#0d9488] hover:text-white font-semibold px-6 py-2.5 rounded-full transition-all text-sm">
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" className="w-4 h-4" />
             View All Reviews on Google
