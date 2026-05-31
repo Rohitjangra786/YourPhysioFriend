@@ -67,45 +67,39 @@ function StarRating({ rating }: { rating: number }) {
 
 export default function Reviews() {
   return (
-    <section id="reviews" className="py-24 bg-white overflow-hidden">
+    <section id="reviews" className="py-14 md:py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-14">
-          <span className="text-[#0d9488] text-sm font-semibold uppercase tracking-widest">
-            Patient Reviews
-          </span>
-          <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-[#1b3a6b] mt-3 mb-4">
+        <div className="text-center mb-8 md:mb-12">
+          <span className="text-[#0d9488] text-xs font-semibold uppercase tracking-widest">Patient Reviews</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1b3a6b] mt-2 mb-3" style={{ fontFamily: "var(--font-space)" }}>
             What Our Patients Say
           </h2>
           {/* Google rating summary */}
-          <div className="inline-flex items-center gap-3 bg-gray-50 border border-gray-100 rounded-2xl px-6 py-3 mt-2">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
-              alt="Google"
-              className="h-5 object-contain"
-            />
+          <div className="inline-flex items-center gap-3 bg-gray-50 border border-gray-100 rounded-2xl px-4 py-2.5 mt-1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-4 object-contain" />
             <div className="flex items-center gap-1.5">
-              <span className="text-2xl font-bold text-[#1b3a6b]">5.0</span>
+              <span className="text-xl font-bold text-[#1b3a6b]">5.0</span>
               <div className="flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} size={16} className="fill-[#FBBC05] text-[#FBBC05]" />
+                  <Star key={i} size={14} className="fill-[#FBBC05] text-[#FBBC05]" />
                 ))}
               </div>
-              <span className="text-gray-500 text-sm">· Google Reviews</span>
+              <span className="text-gray-500 text-xs">· Google Reviews</span>
             </div>
           </div>
         </div>
 
-        {/* Reviews grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Mobile: horizontal scroll; Desktop: grid */}
+        <div className="flex gap-3 overflow-x-auto pb-2 -mx-4 px-4 md:mx-0 md:px-0 md:overflow-visible md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5 snap-x snap-mandatory">
           {reviews.map((r) => (
             <div
               key={r.name}
-              className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col gap-4"
+              className="bg-white border border-gray-100 rounded-2xl p-4 md:p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3 min-w-[78vw] sm:min-w-[60vw] md:min-w-0 snap-start shrink-0 md:shrink"
             >
               {/* Reviewer info */}
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#0d9488] text-white flex items-center justify-center text-sm font-bold shrink-0">
+                <div className="w-9 h-9 rounded-full bg-[#0d9488] text-white flex items-center justify-center text-xs font-bold shrink-0">
                   {r.avatar}
                 </div>
                 <div className="flex-1 min-w-0">
@@ -115,33 +109,16 @@ export default function Reviews() {
                     <span className="text-gray-400 text-xs">{r.date}</span>
                   </div>
                 </div>
-                {/* Google icon */}
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-                  alt="Google"
-                  className="w-5 h-5 shrink-0"
-                />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" className="w-4 h-4 shrink-0" />
               </div>
-
-              {/* Review text */}
-              <p className="text-gray-600 text-sm leading-relaxed">&ldquo;{r.review}&rdquo;</p>
+              <p className="text-gray-600 text-xs md:text-sm leading-relaxed">&ldquo;{r.review}&rdquo;</p>
             </div>
           ))}
         </div>
 
-        {/* CTA to Google Business */}
-        <div className="text-center mt-12">
-          <a
-            href="https://share.google/M4qNPpCJKM7jRp8NK"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border-2 border-[#0d9488] text-[#0d9488] hover:bg-[#0d9488] hover:text-white font-semibold px-7 py-3 rounded-full transition-all duration-200"
-          >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-              alt="Google"
-              className="w-5 h-5"
-            />
+        <div className="text-center mt-8">
+          <a href="https://share.google/M4qNPpCJKM7jRp8NK" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border-2 border-[#0d9488] text-[#0d9488] hover:bg-[#0d9488] hover:text-white font-semibold px-6 py-2.5 rounded-full transition-all text-sm">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" className="w-4 h-4" />
             View All Reviews on Google
           </a>
         </div>

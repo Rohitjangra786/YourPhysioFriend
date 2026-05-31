@@ -23,17 +23,15 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24" style={{ background: "linear-gradient(135deg, #0f2548 0%, #1b3a6b 60%, #0d9488 100%)" }}>
+    <section id="contact" className="py-14 md:py-24" style={{ background: "linear-gradient(135deg, #0f2548 0%, #1b3a6b 60%, #0d9488 100%)" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-[#5eead4] text-sm font-semibold uppercase tracking-widest">
-            Get in Touch
-          </span>
-          <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-white mt-3 mb-4">
+        <div className="text-center mb-8 md:mb-14">
+          <span className="text-[#5eead4] text-xs font-semibold uppercase tracking-widest">Get in Touch</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-3" style={{ fontFamily: "var(--font-space)" }}>
             Book Your Appointment
           </h2>
-          <p className="text-white/60 max-w-lg mx-auto">
+          <p className="text-white/60 max-w-lg mx-auto text-sm">
             Ready to start your recovery journey? Reach out to Dr. Deven Sharma today.
           </p>
         </div>
@@ -96,7 +94,7 @@ export default function Contact() {
           </div>
 
           {/* Form */}
-          <div className="bg-white rounded-3xl p-8 shadow-2xl">
+          <div className="bg-white rounded-3xl p-5 sm:p-8 shadow-2xl">
             {submitted ? (
               <div className="flex flex-col items-center justify-center h-full py-12 text-center">
                 <div className="text-5xl mb-4">🎉</div>

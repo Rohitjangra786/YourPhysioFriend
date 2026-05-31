@@ -35,26 +35,26 @@ const experience = [
 
 export default function Doctor() {
   return (
-    <section id="doctor" className="py-24 bg-white">
+    <section id="doctor" className="py-14 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="text-[#0d9488] text-sm font-semibold uppercase tracking-widest">
+        <div className="text-center mb-8 md:mb-14">
+          <span className="text-[#0d9488] text-xs font-semibold uppercase tracking-widest">
             Meet the Doctor
           </span>
-          <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-[#1b3a6b] mt-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1b3a6b] mt-2" style={{ fontFamily: "var(--font-space)" }}>
             Dr. Deven Sharma (PT)
           </h2>
-          <p className="text-gray-500 mt-2">
+          <p className="text-gray-500 mt-1.5 text-sm">
             Consultant Physiotherapist &amp; Rehabilitation Specialist
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-12 items-start">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
           {/* Photo + Quick Info */}
-          <div className="lg:col-span-2 flex flex-col items-center lg:items-start gap-6">
+          <div className="lg:col-span-2 flex flex-col items-center gap-5">
             {/* Doctor photo */}
-            <div className="relative w-72 h-80 rounded-3xl overflow-hidden shadow-2xl border-4 border-[#0d9488]/20">
+            <div className="relative w-full max-w-[288px] h-72 sm:h-80 rounded-3xl overflow-hidden shadow-2xl border-4 border-[#0d9488]/20 mx-auto">
               <Image
                 src="/images/doctor.jpg"
                 alt="Dr. Deven Sharma — Physiotherapist"
@@ -66,31 +66,23 @@ export default function Doctor() {
             </div>
 
             {/* Credentials badge */}
-            <div className="w-72 bg-[#1b3a6b] text-white rounded-2xl p-5 shadow-lg">
-              <p className="font-bold text-lg">Dr. Deven Sharma</p>
+            <div className="w-full max-w-[288px] bg-[#1b3a6b] text-white rounded-2xl p-4 shadow-lg mx-auto">
+              <p className="font-bold text-base">Dr. Deven Sharma</p>
               <p className="text-[#5eead4] text-sm font-medium mb-3">BPT · MPT (Ortho)</p>
-              <div className="flex flex-col gap-2 text-sm text-white/80">
+              <div className="flex flex-col gap-1.5 text-sm text-white/80">
                 <span>📞 +91 9306893393</span>
                 <span>✉️ drdevenpt@gmail.com</span>
               </div>
-              <a
-                href="https://wa.me/919306893393"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#22c55e] text-white text-sm font-semibold rounded-xl py-2.5 transition-colors"
-              >
+              <a href="https://wa.me/919306893393" target="_blank" rel="noopener noreferrer" className="mt-3 flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#22c55e] text-white text-sm font-semibold rounded-xl py-2.5 transition-colors">
                 💬 WhatsApp Consult
               </a>
             </div>
 
             {/* Quote */}
-            <blockquote className="w-72 bg-[#f0fdfa] border-l-4 border-[#0d9488] rounded-r-2xl p-5 text-sm text-gray-600 italic leading-relaxed">
+            <blockquote className="w-full max-w-[288px] bg-[#f0fdfa] border-l-4 border-[#0d9488] rounded-r-2xl p-4 text-sm text-gray-600 italic leading-relaxed mx-auto hidden sm:block">
               &ldquo;I&apos;m passionate about helping people regain their best posture, prevent
-              workplace injuries, and live pain-free through individualized
-              physiotherapy.&rdquo;
-              <footer className="mt-2 font-semibold text-[#1b3a6b] not-italic">
-                — Dr. Deven Sharma
-              </footer>
+              workplace injuries, and live pain-free.&rdquo;
+              <footer className="mt-2 font-semibold text-[#1b3a6b] not-italic">— Dr. Deven Sharma</footer>
             </blockquote>
           </div>
 

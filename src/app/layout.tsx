@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Poppins, Playfair_Display } from "next/font/google";
+import { Space_Grotesk, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const dmSans = DM_Sans({
+  variable: "--font-dm",
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -28,8 +28,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${playfair.variable}`}>
-      <body className="min-h-full flex flex-col font-[family-name:var(--font-poppins)] antialiased">
+    <html lang="en" className={`${spaceGrotesk.variable} ${dmSans.variable}`}>
+      <body className="min-h-full flex flex-col font-[family-name:var(--font-dm)] antialiased">
         {children}
       </body>
     </html>

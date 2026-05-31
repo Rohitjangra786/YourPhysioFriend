@@ -85,24 +85,27 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col gap-4 shadow-lg">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              className="text-[#1b3a6b] font-medium text-base hover:text-[#0d9488] transition-colors"
-            >
-              {link.label}
+        <div className="md:hidden bg-white border-t border-gray-100 px-4 py-5 shadow-lg">
+          <div className="grid grid-cols-2 gap-2 mb-4">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="text-[#1b3a6b] font-medium text-sm hover:text-[#0d9488] transition-colors py-2 px-3 rounded-xl hover:bg-[#f0fdfa]"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+          <div className="flex gap-2">
+            <a href="tel:9306893393" onClick={() => setMenuOpen(false)} className="flex-1 text-center border border-[#0d9488] text-[#0d9488] text-sm font-semibold py-2.5 rounded-full">
+              📞 Call
             </a>
-          ))}
-          <a
-            href="#contact"
-            onClick={() => setMenuOpen(false)}
-            className="bg-[#0d9488] text-white text-center font-semibold px-5 py-3 rounded-full transition-colors"
-          >
-            Book Appointment
-          </a>
+            <a href="#contact" onClick={() => setMenuOpen(false)} className="flex-1 text-center bg-[#0d9488] text-white text-sm font-semibold py-2.5 rounded-full">
+              Book Now
+            </a>
+          </div>
         </div>
       )}
     </header>
