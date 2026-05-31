@@ -60,12 +60,22 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Desktop: full logo with white bg on dark hero */}
-            <div className={`hidden md:block relative rounded-xl overflow-hidden transition-all duration-300 ${
-              scrolled ? "" : "bg-white/95 shadow-md"
-            }`} style={{ width: 150, height: 62, padding: scrolled ? 0 : 4 }}>
-              <Image src="/images/logo.png" alt="Your Physio Friend" fill sizes="150px"
-                style={{ objectFit: "contain", objectPosition: "left center" }} priority />
+            {/* Desktop: same icon + text style as mobile */}
+            <div className="hidden md:flex items-center gap-3">
+              <div className={`relative rounded-xl overflow-hidden transition-all duration-300 ${
+                scrolled ? "" : "bg-white/95 shadow-md"
+              }`} style={{ width: 48, height: 48, padding: scrolled ? 0 : 4, flexShrink: 0 }}>
+                <Image src="/images/logo.png" alt="Your Physio Friend" fill sizes="48px"
+                  style={{ objectFit: "contain", objectPosition: "center" }} priority />
+              </div>
+              <div className="flex flex-col leading-tight">
+                <span className={`font-extrabold text-base tracking-tight transition-colors duration-300 ${
+                  scrolled ? "text-[#1b3a6b]" : "text-white"
+                }`} style={{ fontFamily: "var(--font-space)" }}>Your Physio Friend</span>
+                <span className={`text-xs font-medium transition-colors duration-300 ${
+                  scrolled ? "text-[#0d9488]" : "text-[#5eead4]"
+                }`}>by Dr. Deven Sharma</span>
+              </div>
             </div>
           </a>
 
