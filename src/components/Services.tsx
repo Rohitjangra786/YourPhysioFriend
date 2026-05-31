@@ -131,7 +131,7 @@ export default function Services() {
         <div className="text-center mt-8 md:mt-14">
           <p className="text-gray-500 text-sm mb-3">Not sure which treatment is right for you?</p>
           <a href="#contact" className="inline-block bg-[#0d9488] hover:bg-[#0f766e] text-white font-semibold px-7 py-3 rounded-full transition-colors shadow-md text-sm">
-            Get a Free Consultation
+            Book a Consultation — ₹1,000
           </a>
         </div>
       </div>
