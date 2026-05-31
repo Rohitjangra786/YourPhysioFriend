@@ -60,8 +60,10 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Desktop: full logo only */}
-            <div className="hidden md:block relative" style={{ width: 150, height: 62 }}>
+            {/* Desktop: full logo with white bg on dark hero */}
+            <div className={`hidden md:block relative rounded-xl overflow-hidden transition-all duration-300 ${
+              scrolled ? "" : "bg-white/95 shadow-md"
+            }`} style={{ width: 150, height: 62, padding: scrolled ? 0 : 4 }}>
               <Image src="/images/logo.png" alt="Your Physio Friend" fill sizes="150px"
                 style={{ objectFit: "contain", objectPosition: "left center" }} priority />
             </div>
