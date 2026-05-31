@@ -39,22 +39,43 @@ export default function Header() {
       }`}>
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between h-14">
 
-          {/* Logo — white silhouette on dark hero, full color when scrolled */}
-          <a href="#home" className="flex items-center shrink-0">
-            <div className="relative"
-              style={{
-                width: "clamp(95px, 26vw, 160px)",
-                height: "clamp(38px, 11vw, 65px)",
-                filter: scrolled
-                  ? "none"
-                  : "brightness(0) invert(1) drop-shadow(0 0 5px rgba(255,255,255,0.35))",
-                transition: "filter 0.4s ease",
-              }}>
+          {/* Logo + site name */}
+          <a href="#home" className="flex items-center gap-2.5 shrink-0">
+            {/* Tight white bg only behind the logo image — no big pill */}
+            <div className={`relative rounded-xl overflow-hidden transition-all duration-300 ${
+              scrolled ? "" : "bg-white/95 shadow-md"
+            }`} style={{ width: "clamp(38px, 11vw, 52px)", height: "clamp(38px, 11vw, 52px)", padding: scrolled ? 0 : 3 }}>
               <Image
                 src="/images/logo.png"
                 alt="Your Physio Friend"
                 fill
-                sizes="160px"
+                sizes="52px"
+                style={{ objectFit: "contain", objectPosition: "center" }}
+                priority
+              />
+            </div>
+
+            {/* Clinic name text — mobile only */}
+            <div className="flex flex-col md:hidden leading-tight">
+              <span className={`font-extrabold text-sm tracking-tight transition-colors duration-300 ${
+                scrolled ? "text-[#1b3a6b]" : "text-white"
+              }`} style={{ fontFamily: "var(--font-space)" }}>
+                Your Physio Friend
+              </span>
+              <span className={`text-[10px] font-medium transition-colors duration-300 ${
+                scrolled ? "text-[#0d9488]" : "text-[#5eead4]"
+              }`}>
+                by Dr. Deven Sharma
+              </span>
+            </div>
+
+            {/* Full logo for desktop */}
+            <div className="hidden md:block relative" style={{ width: 140, height: 58 }}>
+              <Image
+                src="/images/logo.png"
+                alt="Your Physio Friend"
+                fill
+                sizes="140px"
                 style={{ objectFit: "contain", objectPosition: "left center" }}
                 priority
               />
@@ -113,10 +134,15 @@ export default function Header() {
 
         {/* Sidebar header */}
         <div className="flex items-center justify-between px-5 pt-5 pb-4 border-b border-white/10">
-          <div className="relative" style={{ width: 120, height: 50 }}>
-            <Image src="/images/logo.png" alt="Your Physio Friend" fill sizes="120px"
-              style={{ objectFit: "contain", objectPosition: "left center",
-                filter: "drop-shadow(0 1px 4px rgba(0,0,0,0.4))" }} />
+          <div className="flex items-center gap-2.5">
+            <div className="relative rounded-xl overflow-hidden bg-white/95 shadow-md" style={{ width: 42, height: 42, padding: 3 }}>
+              <Image src="/images/logo.png" alt="Your Physio Friend" fill sizes="42px"
+                style={{ objectFit: "contain", objectPosition: "center" }} />
+            </div>
+            <div className="flex flex-col leading-tight">
+              <span className="text-white font-extrabold text-sm" style={{ fontFamily: "var(--font-space)" }}>Your Physio Friend</span>
+              <span className="text-[#5eead4] text-[10px] font-medium">by Dr. Deven Sharma</span>
+            </div>
           </div>
           <button onClick={() => setMenuOpen(false)}
             className="w-8 h-8 flex items-center justify-center rounded-xl bg-white/10 text-white active:scale-95 transition-transform">
