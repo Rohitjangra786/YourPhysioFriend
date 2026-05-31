@@ -88,19 +88,19 @@ export default function Services() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
           {services.map((svc) => {
             const Icon = svc.icon;
             return (
               <div
                 key={svc.title}
-                className="bg-white rounded-2xl md:rounded-3xl p-4 md:p-7 flex flex-col gap-3 md:gap-5 hover:-translate-y-1 transition-all duration-300 group"
+                className="bg-white rounded-2xl md:rounded-3xl p-4 md:p-7 flex flex-col gap-2.5 md:gap-5 hover:-translate-y-1 transition-all duration-300 group"
                 style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.07)" }}
               >
-                {/* Icon row */}
-                <div className="flex items-start justify-between gap-2">
+                {/* Icon + title row (compact on mobile) */}
+                <div className="flex items-center gap-3 md:flex-col md:items-start md:gap-0">
                   <div
-                    className="w-11 h-11 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center shrink-0"
+                    className="w-11 h-11 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center shrink-0 md:mb-3"
                     style={{
                       background: svc.gradient,
                       boxShadow: `0 6px 18px ${svc.glow}, inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -1px 0 rgba(0,0,0,0.12)`,
@@ -108,17 +108,20 @@ export default function Services() {
                   >
                     <Icon size={20} weight="duotone" color="white" />
                   </div>
-                  <span className={`${svc.badge} text-[9px] md:text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 md:px-2.5 md:py-1 rounded-full hidden sm:block`}>
+                  <div className="flex flex-col md:block">
+                    <h3 className="font-bold text-[#1b3a6b] text-sm md:text-xl group-hover:text-[#0d9488] transition-colors leading-tight" style={{ fontFamily: "var(--font-space)" }}>
+                      {svc.title}
+                    </h3>
+                    <span className={`${svc.badge} text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full inline-block mt-0.5 md:hidden`}>
+                      {svc.category}
+                    </span>
+                  </div>
+                  <span className={`${svc.badge} text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full hidden md:block ml-auto self-start`}>
                     {svc.category}
                   </span>
                 </div>
 
-                <h3 className="font-bold text-[#1b3a6b] text-sm md:text-xl group-hover:text-[#0d9488] transition-colors leading-tight" style={{ fontFamily: "var(--font-space)" }}>
-                  {svc.title}
-                </h3>
-
-                <p className="text-gray-500 text-xs md:text-sm leading-relaxed hidden sm:block">{svc.description}</p>
-                <p className="text-gray-500 text-xs leading-relaxed sm:hidden line-clamp-2">{svc.description}</p>
+                <p className="text-gray-500 text-xs md:text-sm leading-relaxed">{svc.description}</p>
 
                 <a href="#contact" className="mt-auto text-[#0d9488] text-xs md:text-sm font-semibold flex items-center gap-1 transition-all">
                   Book →
