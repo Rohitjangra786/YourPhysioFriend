@@ -33,13 +33,14 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="flex items-center shrink-0">
-          <div className="relative overflow-hidden" style={{ width: 160, height: 68 }}>
+          <div className="relative overflow-hidden"
+            style={{ width: "clamp(100px, 28vw, 160px)", height: "clamp(42px, 12vw, 68px)" }}>
             <Image
               src="/images/logo.jpg"
               alt="Your Physio Friend Logo"
               fill
               sizes="160px"
-              style={{ objectFit: "contain", objectPosition: "center", transform: "scale(1.08)" }}
+              style={{ objectFit: "contain", objectPosition: "center", transform: "scale(1.08)", mixBlendMode: "multiply" }}
               priority
             />
           </div>
