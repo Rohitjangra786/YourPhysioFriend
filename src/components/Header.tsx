@@ -39,14 +39,16 @@ export default function Header() {
       }`}>
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between h-14">
 
-          {/* Logo */}
-          <a href="#home" className="flex items-center shrink-0">
-            <div className="relative" style={{ width: "clamp(100px, 28vw, 165px)", height: "clamp(40px, 12vw, 68px)" }}>
+          {/* Logo — white frosted pill on dark bg, plain on white bg */}
+          <a href="#home" className={`flex items-center shrink-0 rounded-xl transition-all duration-300 ${
+            scrolled ? "" : "bg-white/90 backdrop-blur-sm px-2 py-1 shadow-md"
+          }`}>
+            <div className="relative" style={{ width: "clamp(95px, 26vw, 160px)", height: "clamp(38px, 11vw, 65px)" }}>
               <Image
                 src="/images/logo.png"
                 alt="Your Physio Friend"
                 fill
-                sizes="165px"
+                sizes="160px"
                 style={{ objectFit: "contain", objectPosition: "left center" }}
                 priority
               />
@@ -99,46 +101,67 @@ export default function Header() {
       )}
 
       {/* Sidebar drawer */}
-      <aside className={`fixed top-0 right-0 z-[70] h-full w-72 bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out md:hidden ${
+      <aside className={`fixed top-0 right-0 z-[70] h-full w-72 flex flex-col transition-transform duration-300 ease-in-out md:hidden shadow-2xl ${
         menuOpen ? "translate-x-0" : "translate-x-full"
-      }`}>
+      }`} style={{ background: "linear-gradient(160deg, #0f2548 0%, #1b3a6b 100%)" }}>
+
         {/* Sidebar header */}
-        <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
+        <div className="flex items-center justify-between px-5 pt-5 pb-4 border-b border-white/10">
           <div className="relative" style={{ width: 120, height: 50 }}>
-            <Image src="/images/logo.png" alt="Your Physio Friend" fill sizes="120px" style={{ objectFit: "contain", objectPosition: "left center" }} />
+            <Image src="/images/logo.png" alt="Your Physio Friend" fill sizes="120px"
+              style={{ objectFit: "contain", objectPosition: "left center",
+                filter: "drop-shadow(0 1px 4px rgba(0,0,0,0.4))" }} />
           </div>
-          <button
-            onClick={() => setMenuOpen(false)}
-            className="w-8 h-8 flex items-center justify-center rounded-xl bg-gray-100 text-gray-500 active:scale-95 transition-transform"
-          >
+          <button onClick={() => setMenuOpen(false)}
+            className="w-8 h-8 flex items-center justify-center rounded-xl bg-white/10 text-white active:scale-95 transition-transform">
             <X size={18} />
           </button>
         </div>
 
+        {/* Doctor info strip */}
+        <div className="px-5 py-4 border-b border-white/10">
+          <p className="text-[#5eead4] text-xs font-semibold uppercase tracking-widest mb-0.5">Your Physio Friend</p>
+          <p className="text-white font-bold text-sm">Dr. Deven Sharma (PT)</p>
+          <p className="text-white/50 text-xs">BPT · MPT (Ortho) · Est. 2022</p>
+          <p className="text-white/40 text-[11px] mt-1 italic">From Pain to Power — Let's Get You Moving</p>
+        </div>
+
         {/* Nav links */}
-        <nav className="flex-1 overflow-y-auto px-4 py-4 flex flex-col gap-1">
+        <nav className="flex-1 overflow-y-auto px-3 py-3 flex flex-col gap-0.5">
           {navLinks.map(({ label, href, Icon }) => (
-            <a
-              key={href}
-              href={href}
-              onClick={() => setMenuOpen(false)}
-              className="flex items-center gap-3 px-4 py-3 rounded-xl text-[#1b3a6b] font-medium text-sm hover:bg-[#f0fdfa] hover:text-[#0d9488] transition-colors"
-            >
-              <Icon size={18} className="text-[#0d9488] shrink-0" />
+            <a key={href} href={href} onClick={() => setMenuOpen(false)}
+              className="flex items-center gap-3 px-4 py-3 rounded-xl text-white/80 font-medium text-sm hover:bg-white/10 hover:text-white transition-colors">
+              <Icon size={17} className="text-[#5eead4] shrink-0" />
               {label}
             </a>
           ))}
         </nav>
 
-        {/* Bottom CTA */}
-        <div className="px-4 py-5 border-t border-gray-100 flex flex-col gap-2">
-          <a href="tel:9306893393" onClick={() => setMenuOpen(false)} className="flex items-center justify-center gap-2 border border-[#0d9488] text-[#0d9488] font-semibold py-3 rounded-full text-sm">
-            📞 +91 9306893393
-          </a>
-          <a href="#contact" onClick={() => setMenuOpen(false)} className="flex items-center justify-center gap-2 bg-[#0d9488] text-white font-semibold py-3 rounded-full text-sm">
+        {/* Quick contact strip */}
+        <div className="px-4 pt-3 pb-2 border-t border-white/10">
+          <div className="flex items-center gap-2 text-white/50 text-xs mb-3">
+            <span className="flex-1 h-px bg-white/10" />
+            <span>Quick Contact</span>
+            <span className="flex-1 h-px bg-white/10" />
+          </div>
+          <div className="grid grid-cols-2 gap-2 mb-3">
+            <a href="tel:9306893393" onClick={() => setMenuOpen(false)}
+              className="flex items-center justify-center gap-1.5 bg-white/10 hover:bg-white/20 text-white text-xs font-medium py-2.5 rounded-xl transition-colors">
+              📞 Call
+            </a>
+            <a href="https://wa.me/919306893393" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}
+              className="flex items-center justify-center gap-1.5 bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#86efac] text-xs font-medium py-2.5 rounded-xl transition-colors">
+              💬 WhatsApp
+            </a>
+          </div>
+          <a href="#contact" onClick={() => setMenuOpen(false)}
+            className="flex items-center justify-center gap-2 w-full bg-[#0d9488] hover:bg-[#0f766e] text-white font-semibold py-3 rounded-xl text-sm transition-colors">
             Book Appointment →
           </a>
         </div>
+
+        {/* Footer tagline */}
+        <p className="text-center text-white/20 text-[10px] py-3">yourphysiofriend.com</p>
       </aside>
     </>
   );

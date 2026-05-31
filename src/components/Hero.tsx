@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="absolute inset-0 opacity-[0.04]"
         style={{ backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
 
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-24 pb-14 md:py-32 md:pt-40 w-full grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-20 pb-14 md:py-32 md:pt-40 w-full grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         {/* Text */}
         <div>
           {/* Badge */}
