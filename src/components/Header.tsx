@@ -44,9 +44,9 @@ export default function Header() {
 
             {/* Mobile: small icon + text */}
             <div className="md:hidden flex items-center gap-2">
-              <div className={`relative rounded-xl overflow-hidden transition-all duration-300 ${
-                scrolled ? "" : "border border-white/50"
-              }`} style={{ width: 42, height: 42, padding: 2, flexShrink: 0 }}>
+              <div className="relative rounded-xl overflow-hidden transition-all duration-300"
+                style={{ width: 42, height: 42, padding: 2, flexShrink: 0,
+                  border: scrolled ? "none" : "1.5px solid rgba(255,255,255,0.7)" }}>
                 <Image src="/images/logo.png" alt="Your Physio Friend" fill sizes="42px"
                   style={{ objectFit: "contain", objectPosition: "center" }} priority />
               </div>
@@ -62,9 +62,9 @@ export default function Header() {
 
             {/* Desktop: same icon + text style as mobile */}
             <div className="hidden md:flex items-center gap-3">
-              <div className={`relative rounded-xl overflow-hidden transition-all duration-300 ${
-                scrolled ? "" : "border border-white/50"
-              }`} style={{ width: 48, height: 48, padding: 2, flexShrink: 0 }}>
+              <div className="relative rounded-xl overflow-hidden transition-all duration-300"
+                style={{ width: 48, height: 48, padding: 2, flexShrink: 0,
+                  border: scrolled ? "none" : "1.5px solid rgba(255,255,255,0.7)" }}>
                 <Image src="/images/logo.png" alt="Your Physio Friend" fill sizes="48px"
                   style={{ objectFit: "contain", objectPosition: "center" }} priority />
               </div>
