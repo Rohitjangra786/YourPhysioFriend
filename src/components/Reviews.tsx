@@ -73,7 +73,7 @@ export default function Reviews() {
         <div className="text-center mb-6 md:mb-10">
           <span className="text-[#0d9488] text-xs font-semibold uppercase tracking-widest">Patient Reviews</span>
           <h2 className="text-3xl md:text-4xl font-bold text-[#1b3a6b] mt-2 mb-3" style={{ fontFamily: "var(--font-space)" }}>
-            What Our Patients Say
+            What Our Patients in Gurgaon Say
           </h2>
           {/* Google rating summary */}
           <div className="inline-flex items-center gap-3 bg-gray-50 border border-gray-100 rounded-2xl px-4 py-2.5 mt-1">

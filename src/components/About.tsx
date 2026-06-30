@@ -71,12 +71,12 @@ export default function About() {
           <div>
             <span className="text-[#0d9488] text-xs font-semibold uppercase tracking-widest">About Us</span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1b3a6b] mt-2 mb-4 leading-tight" style={{ fontFamily: "var(--font-space)" }}>
-              Welcome to{" "}
-              <span className="text-[#0d9488]">Your Physio Friend</span>
+              Your Trusted Physiotherapy Clinic in{" "}
+              <span className="text-[#0d9488]">Gurgaon (Gurugram)</span>
             </h2>
             <p className="text-gray-600 text-base leading-relaxed mb-4">
-              At <strong className="text-[#1b3a6b]">Your Physio Friend</strong>, we believe in compassionate care and personalized physiotherapy. Led by{" "}
-              <strong className="text-[#1b3a6b]">Dr. Deven Sharma</strong>, we help you move freely and recover from injuries — with comprehensive post-surgical rehab and corporate wellness programs.
+              At <strong className="text-[#1b3a6b]">Your Physio Friend</strong> in <strong className="text-[#1b3a6b]">Gurugram (Gurgaon), Haryana</strong>, we believe in compassionate care and personalized physiotherapy. Led by{" "}
+              <strong className="text-[#1b3a6b]">Dr. Deven Sharma (BPT, MPT Ortho)</strong>, we help patients across Gurgaon and Delhi NCR move freely and recover from injuries — with comprehensive post-surgical rehab and corporate wellness programs.
             </p>
 
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">

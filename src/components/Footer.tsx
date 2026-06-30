@@ -33,7 +33,7 @@ export default function Footer() {
             <div className="relative overflow-hidden rounded-lg bg-white" style={{ width: 160, height: 68 }}>
               <Image
                 src="/images/logo.png"
-                alt="Your Physio Friend"
+                alt="Your Physio Friend — Physiotherapy Clinic in Gurgaon (Gurugram)"
                 fill
                 sizes="160px"
                 style={{ objectFit: "contain", objectPosition: "center", transform: "scale(1.08)" }}

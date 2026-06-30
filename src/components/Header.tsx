@@ -47,7 +47,7 @@ export default function Header() {
               <div className={`relative rounded-xl overflow-hidden transition-all duration-300 ${
                 scrolled ? "bg-white/10" : "bg-white/95 shadow-md"
               }`} style={{ width: 42, height: 42, padding: scrolled ? 2 : 3, flexShrink: 0 }}>
-                <Image src="/images/logo.png" alt="Your Physio Friend" fill sizes="42px"
+                <Image src="/images/logo.png" alt="Your Physio Friend — Physiotherapist in Gurgaon (Gurugram)" fill sizes="42px"
                   style={{ objectFit: "contain", objectPosition: "center" }} priority />
               </div>
               <div className="flex flex-col leading-tight">
@@ -65,7 +65,7 @@ export default function Header() {
               <div className={`relative rounded-xl overflow-hidden transition-all duration-300 ${
                 scrolled ? "bg-white/10" : "bg-white/95 shadow-md"
               }`} style={{ width: 48, height: 48, padding: scrolled ? 2 : 3, flexShrink: 0 }}>
-                <Image src="/images/logo.png" alt="Your Physio Friend" fill sizes="48px"
+                <Image src="/images/logo.png" alt="Your Physio Friend — Physiotherapist in Gurgaon (Gurugram)" fill sizes="48px"
                   style={{ objectFit: "contain", objectPosition: "center" }} priority />
               </div>
               <div className="flex flex-col leading-tight">
@@ -133,7 +133,7 @@ export default function Header() {
         <div className="flex items-center justify-between px-5 pt-5 pb-4 border-b border-white/10">
           <div className="flex items-center gap-2.5">
             <div className="relative rounded-xl overflow-hidden bg-white/95 shadow-md" style={{ width: 42, height: 42, padding: 3 }}>
-              <Image src="/images/logo.png" alt="Your Physio Friend" fill sizes="42px"
+              <Image src="/images/logo.png" alt="Your Physio Friend — Physiotherapist in Gurgaon (Gurugram)" fill sizes="42px"
                 style={{ objectFit: "contain", objectPosition: "center" }} />
             </div>
             <div className="flex flex-col leading-tight">

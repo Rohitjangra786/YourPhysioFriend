@@ -46,7 +46,7 @@ export default function Doctor() {
             Dr. Deven Sharma (PT)
           </h2>
           <p className="text-gray-500 mt-1.5 text-sm">
-            Consultant Physiotherapist &amp; Rehabilitation Specialist
+            Consultant Physiotherapist &amp; Rehabilitation Specialist in Gurgaon (Gurugram)
           </p>
         </div>
 
@@ -57,7 +57,7 @@ export default function Doctor() {
             <div className="relative w-full max-w-[288px] h-72 sm:h-80 rounded-3xl overflow-hidden shadow-2xl border-4 border-[#0d9488]/20 mx-auto">
               <Image
                 src="/images/doctor.jpg"
-                alt="Dr. Deven Sharma — Physiotherapist"
+                alt="Dr. Deven Sharma — Best Physiotherapist in Gurgaon (Gurugram), BPT MPT Ortho"
                 fill
                 sizes="288px"
                 style={{ objectFit: "cover", objectPosition: "center top" }}

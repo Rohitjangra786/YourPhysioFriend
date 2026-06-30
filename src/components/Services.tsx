@@ -80,10 +80,10 @@ export default function Services() {
             What We Offer
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-[#1b3a6b] mt-2 mb-3" style={{ fontFamily: "var(--font-space)" }}>
-            Our Treatment Services
+            Physiotherapy &amp; Rehabilitation Services in Gurgaon
           </h2>
           <p className="text-gray-500 text-sm max-w-xl mx-auto">
-            Comprehensive physiotherapy and holistic healing solutions for lasting recovery.
+            Comprehensive physiotherapy and holistic healing in Gurugram (Gurgaon) — from sports injury rehab to posture correction, for lasting recovery.
           </p>
         </div>
 
