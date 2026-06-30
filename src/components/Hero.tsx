@@ -35,6 +35,7 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="animate-fade-up-2 font-extrabold leading-[1.05] tracking-tight mb-5" style={{ fontFamily: "var(--font-space)" }}>
+            <span className="sr-only">Best Physiotherapist in Gurgaon (Gurugram) — Your Physio Friend by Dr. Deven Sharma. </span>
             <span className="block text-white text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl">From</span>
             <span className="block text-[#5eead4] text-[2.8rem] sm:text-6xl md:text-7xl lg:text-8xl">Pain to</span>
             <span className="block text-white text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl">Power</span>
