@@ -57,6 +57,18 @@ export const SERVICES = [
   "Corporate Wellness Programs",
 ] as const;
 
+// On-page sections (single-page site). Listed in the sitemap as anchor URLs
+// so search engines can surface jump-to-section results for the homepage.
+export const SECTIONS = [
+  { path: "/", changeFrequency: "monthly", priority: 1.0 },
+  { path: "/#about", changeFrequency: "yearly", priority: 0.7 },
+  { path: "/#services", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/#doctor", changeFrequency: "yearly", priority: 0.8 },
+  { path: "/#reviews", changeFrequency: "weekly", priority: 0.7 },
+  { path: "/#location", changeFrequency: "yearly", priority: 0.8 },
+  { path: "/#contact", changeFrequency: "monthly", priority: 0.9 },
+] as const;
+
 // Location-rich keyword set targeting both spellings of the city.
 export const KEYWORDS = [
   "physiotherapy in Gurgaon",

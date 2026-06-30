@@ -1,15 +1,16 @@
 import type { MetadataRoute } from "next";
-import { SITE_URL } from "@/lib/seo";
+import { SITE_URL, SECTIONS } from "@/lib/seo";
 
-// Single-page site: the homepage is the primary URL. Section anchors are not
-// separate documents, so we only list the canonical home URL.
+// Single-page site: the homepage is the primary URL, with section anchors
+// listed so search engines understand the page structure. Anchor entries
+// strip the trailing "/" so the homepage URL stays canonical (no "/#...").
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: SITE_URL,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
-    },
-  ];
+  const lastModified = new Date();
+
+  return SECTIONS.map((section) => ({
+    url: `${SITE_URL}${section.path === "/" ? "" : section.path}`,
+    lastModified,
+    changeFrequency: section.changeFrequency,
+    priority: section.priority,
+  }));
 }
